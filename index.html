@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="description" content="Privacy Policy for VibeTube mobile app">
+    <meta name="theme-color" content="#0a0a0a">
     <title>Privacy Policy - VibeTube</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,14 +51,8 @@
                     },
                     keyframes: {
                         fadeUp: {
-                            '0%': {
-                                opacity: '0',
-                                transform: 'translateY(20px)',
-                            },
-                            '100%': {
-                                opacity: '1',
-                                transform: 'translateY(0)',
-                            },
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
                         },
                     },
                 },
@@ -71,6 +66,12 @@
             --ink-dark: #0a0a0a;
             --ink-medium: #1a1a1a;
             --ink-light: #2a2a2a;
+            --page-pad: clamp(1rem, 4vw, 1.5rem);
+            --section-pad: clamp(1.25rem, 4vw, 2rem);
+            --safe-top: env(safe-area-inset-top, 0px);
+            --safe-bottom: env(safe-area-inset-bottom, 0px);
+            --safe-left: env(safe-area-inset-left, 0px);
+            --safe-right: env(safe-area-inset-right, 0px);
         }
 
         * {
@@ -81,32 +82,70 @@
 
         html {
             scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
         }
 
         body {
             font-family: 'DM Sans', sans-serif;
             background: radial-gradient(ellipse at top, #1a1a1a 0%, #0a0a0a 100%);
-            color: #e8e8e8;
+            color: #ffffff;
             line-height: 1.7;
             min-height: 100vh;
+            min-height: 100dvh;
+            overflow-x: hidden;
+            padding-left: var(--safe-left);
+            padding-right: var(--safe-right);
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .page-pad {
+            padding-left: var(--page-pad);
+            padding-right: var(--page-pad);
+        }
+
+        .site-header {
+            padding-top: var(--safe-top);
+            padding-left: max(var(--page-pad), var(--safe-left));
+            padding-right: max(var(--page-pad), var(--safe-right));
         }
 
         .hero-section {
             background: radial-gradient(ellipse at center, #1a1a1a 0%, #0a0a0a 100%);
             position: relative;
             overflow: hidden;
+            padding-top: calc(5.5rem + var(--safe-top));
+            padding-bottom: clamp(2.5rem, 8vw, 5rem);
         }
 
         .hero-section::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.05) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 50%, rgba(212, 175, 55, 0.03) 0%, transparent 50%);
+            inset: 0;
+            background:
+                radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(212, 175, 55, 0.03) 0%, transparent 50%);
             pointer-events: none;
+        }
+
+        .hero-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.25rem, 10vw, 4.5rem);
+            font-weight: 600;
+            color: #fef9e7;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+        }
+
+        .hero-lead {
+            font-size: clamp(0.95rem, 2.8vw, 1.125rem);
+            line-height: 1.75;
+            color: #e8e8e8;
+            max-width: 40rem;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .gold-divider {
@@ -121,55 +160,95 @@
             opacity: 0.8;
         }
 
-        .section-card {
-            background: rgba(26, 26, 26, 0.8);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(212, 175, 55, 0.1);
-            border-radius: 8px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            opacity: 0;
-            animation: fadeUp 0.8s ease-out forwards;
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(16px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
-        .section-card:nth-child(1) { animation-delay: 0.1s; }
-        .section-card:nth-child(2) { animation-delay: 0.2s; }
-        .section-card:nth-child(3) { animation-delay: 0.3s; }
-        .section-card:nth-child(4) { animation-delay: 0.4s; }
-        .section-card:nth-child(5) { animation-delay: 0.5s; }
-        .section-card:nth-child(6) { animation-delay: 0.6s; }
-        .section-card:nth-child(7) { animation-delay: 0.7s; }
-        .section-card:nth-child(8) { animation-delay: 0.8s; }
-        .section-card:nth-child(9) { animation-delay: 0.9s; }
-        .section-card:nth-child(10) { animation-delay: 1.0s; }
-        .section-card:nth-child(11) { animation-delay: 1.1s; }
-        .section-card:nth-child(12) { animation-delay: 1.2s; }
-        .section-card:nth-child(13) { animation-delay: 1.3s; }
+        .section-card {
+            background: rgba(26, 26, 26, 0.85);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(212, 175, 55, 0.12);
+            border-radius: clamp(8px, 2vw, 12px);
+            padding: var(--section-pad);
+            margin-bottom: clamp(1rem, 3vw, 2rem);
+            opacity: 1;
+            animation: fadeUp 0.7s ease-out both;
+        }
+
+        .section-card:nth-child(1) { animation-delay: 0.05s; }
+        .section-card:nth-child(2) { animation-delay: 0.1s; }
+        .section-card:nth-child(3) { animation-delay: 0.15s; }
+        .section-card:nth-child(4) { animation-delay: 0.2s; }
+        .section-card:nth-child(5) { animation-delay: 0.25s; }
+        .section-card:nth-child(6) { animation-delay: 0.3s; }
+        .section-card:nth-child(7) { animation-delay: 0.35s; }
+        .section-card:nth-child(8) { animation-delay: 0.4s; }
+        .section-card:nth-child(9) { animation-delay: 0.45s; }
+        .section-card:nth-child(10) { animation-delay: 0.5s; }
+        .section-card:nth-child(11) { animation-delay: 0.55s; }
+        .section-card:nth-child(12) { animation-delay: 0.6s; }
+        .section-card:nth-child(13) { animation-delay: 0.65s; }
+
+        .section-header {
+            display: flex;
+            align-items: flex-start;
+            gap: clamp(0.75rem, 3vw, 1.5rem);
+            margin-bottom: 1.25rem;
+        }
 
         .section-number {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 3rem;
+            font-size: clamp(1.75rem, 6vw, 3rem);
             font-weight: 600;
             color: var(--gold-primary);
             letter-spacing: -0.02em;
             line-height: 1;
+            flex-shrink: 0;
+            min-width: 2.5rem;
         }
 
         .section-title {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 2rem;
+            font-size: clamp(1.35rem, 5vw, 2rem);
             font-weight: 600;
             color: #fef9e7;
             letter-spacing: -0.01em;
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
+            line-height: 1.2;
+        }
+
+        .body-text {
+            color: #e8e8e8;
+            font-size: clamp(0.9375rem, 2.5vw, 1rem);
+            line-height: 1.75;
         }
 
         .toc-item {
-            transition: all 0.3s ease;
+            display: block;
+            transition: color 0.25s ease, padding-left 0.25s ease;
             cursor: pointer;
+            color: #ffffff;
+            padding: 0.65rem 0;
+            min-height: 44px;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.08);
+            text-decoration: none;
+            font-size: 0.95rem;
         }
 
-        .toc-item:hover {
+        .toc-item:last-child {
+            border-bottom: none;
+        }
+
+        .toc-item:hover,
+        .toc-item:active {
             color: var(--gold-primary);
             padding-left: 0.5rem;
         }
@@ -179,6 +258,7 @@
             text-decoration: none;
             border-bottom: 1px solid transparent;
             transition: border-color 0.3s ease;
+            word-break: break-all;
         }
 
         .gold-link:hover {
@@ -186,149 +266,273 @@
         }
 
         .badge {
+            display: inline-block;
             background: rgba(212, 175, 55, 0.1);
             border: 1px solid rgba(212, 175, 55, 0.3);
             color: var(--gold-primary);
             padding: 0.5rem 1rem;
             border-radius: 4px;
-            font-size: 0.875rem;
-            letter-spacing: 0.05em;
+            font-size: clamp(0.75rem, 2.5vw, 0.875rem);
+            letter-spacing: 0.04em;
+            max-width: 100%;
         }
 
-        .package-name {
-            font-family: 'DM Sans', sans-serif;
-            font-size: 0.875rem;
+        .meta-block {
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem;
+            font-size: clamp(0.875rem, 2.5vw, 1rem);
+            color: #d0d0d0;
+        }
+
+        .info-box {
+            background: rgba(16, 16, 16, 0.6);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            border-radius: 8px;
+            padding: clamp(1rem, 3vw, 1.25rem);
+        }
+
+        .bullet-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .bullet-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+
+        .bullet-list .dot {
             color: var(--gold-primary);
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
+            flex-shrink: 0;
+            margin-top: 0.15em;
+            line-height: 1.5;
+        }
+
+        .disc-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            padding-left: 0;
+        }
+
+        .disc-list li {
+            position: relative;
+            padding-left: 1.15rem;
+        }
+
+        .disc-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.55em;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: var(--gold-primary);
+            opacity: 0.7;
+        }
+
+        /* Permissions: stacked cards on phone, table on tablet+ */
+        .perm-table-wrap {
+            display: none;
+        }
+
+        .perm-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .perm-card {
+            background: rgba(16, 16, 16, 0.55);
+            border: 1px solid rgba(212, 175, 55, 0.12);
+            border-radius: 8px;
+            padding: 1rem;
+        }
+
+        .perm-name {
+            font-family: ui-monospace, 'Cascadia Code', 'Segoe UI Mono', monospace;
+            font-size: clamp(0.7rem, 2.2vw, 0.8rem);
+            color: var(--gold-primary);
+            word-break: break-word;
+            margin-bottom: 0.4rem;
+            line-height: 1.4;
+        }
+
+        .perm-purpose {
+            font-size: 0.9rem;
+            color: #d0d0d0;
+            line-height: 1.55;
+        }
+
+        .site-footer {
+            border-top: 1px solid rgba(120, 53, 15, 0.2);
+            padding: 2rem var(--page-pad);
+            padding-bottom: calc(2rem + var(--safe-bottom));
+            text-align: center;
+        }
+
+        @media (min-width: 640px) {
+            .toc-item {
+                border-bottom: none;
+                padding: 0.5rem 0;
+            }
+
+            .perm-cards {
+                display: none;
+            }
+
+            .perm-table-wrap {
+                display: block;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .perm-table {
+                width: 100%;
+                min-width: 480px;
+                text-align: left;
+                border-collapse: collapse;
+            }
+
+            .perm-table th {
+                padding: 0.75rem 1rem;
+                font-weight: 600;
+                color: #fde68a;
+                border-bottom: 1px solid rgba(120, 53, 15, 0.3);
+                white-space: nowrap;
+            }
+
+            .perm-table td {
+                padding: 0.75rem 1rem;
+                color: #d0d0d0;
+                border-bottom: 1px solid rgba(120, 53, 15, 0.15);
+                vertical-align: top;
+            }
+
+            .perm-table tr:last-child td {
+                border-bottom: none;
+            }
+
+            .perm-table .perm-name {
+                margin-bottom: 0;
+            }
         }
 
         @media (prefers-reduced-motion: reduce) {
-            * {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
+            *,
+            *::before,
+            *::after {
+                animation: none !important;
                 transition-duration: 0.01ms !important;
             }
-        }
 
-        @media (max-width: 768px) {
-            .section-number {
-                font-size: 2rem;
-            }
-            .section-title {
-                font-size: 1.5rem;
+            .section-card {
+                opacity: 1 !important;
+                transform: none !important;
             }
         }
     </style>
 </head>
 <body>
     <!-- Top Bar -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-ink-950/80 backdrop-blur-md border-b border-gold-900/20">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-            <div class="flex items-center gap-4">
-                <span class="text-gold-400 font-semibold">VibeTube</span>
-            </div>
-            <div class="text-gold-400 text-sm font-medium tracking-wide">Privacy Policy</div>
+    <header class="fixed top-0 left-0 right-0 z-50 bg-ink-950/85 backdrop-blur-md border-b border-gold-900/20 site-header">
+        <div class="max-w-6xl mx-auto py-3.5 sm:py-4 flex items-center justify-between gap-3">
+            <span class="text-gold-400 font-semibold text-base sm:text-lg tracking-wide truncate">VibeTube</span>
+            <span class="text-gold-400/90 text-xs sm:text-sm font-medium tracking-wide shrink-0">Privacy Policy</span>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-section pt-32 pb-20 px-6">
-        <div class="max-w-4xl mx-auto text-center">
-            <div class="mb-8">
-                <h1 class="font-display text-5xl md:text-7xl font-semibold text-gold-100 tracking-tight mb-4">
-                    Privacy Policy
-                </h1>
-                <div class="gold-divider-thick max-w-md mx-auto mb-8"></div>
+    <section class="hero-section page-pad">
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <h1 class="hero-title">Privacy Policy</h1>
+            <div class="gold-divider-thick max-w-xs sm:max-w-md mx-auto mb-6 sm:mb-8"></div>
+
+            <div class="flex justify-center mb-6 sm:mb-8">
+                <span class="badge">Effective date: September 24, 2026</span>
             </div>
-            
-            <div class="flex justify-center mb-8">
-                <span class="badge">Effective date: [দিন মাস ২০২৬]</span>
-            </div>
-            
-            <div class="flex justify-center mb-8">
-                <div class="text-ink-300 text-center">
-                    <p class="mb-2"><strong class="text-gold-200">Developer:</strong> AppBox Labs</p>
-                    <p class="mb-2"><strong class="text-gold-200">App:</strong> VibeTube</p>
-                    <p class="mt-2"><strong class="text-gold-200">Contact:</strong> [your-email@example.com]</p>
-                </div>
-            </div>
-            
-            <p class="text-ink-300 text-lg max-w-2xl mx-auto leading-relaxed">
+
+            <p class="hero-lead">
                 VibeTube ("we", "our", or "the App") is an independent media player and manager that allows users to discover and play royalty-licensed online audio/video content, save open-license media for offline use, and play local media files stored on their device. This Privacy Policy explains what information the App accesses, how it is handled, and your choices.
             </p>
-            
-            <p class="text-ink-300 text-lg max-w-2xl mx-auto leading-relaxed mt-4">
+
+            <p class="hero-lead mt-4">
                 By installing and using VibeTube, you agree to this Privacy Policy.
             </p>
         </div>
     </section>
 
     <!-- Table of Contents -->
-    <section class="max-w-4xl mx-auto px-6 mb-16">
+    <section class="max-w-4xl mx-auto page-pad mb-8 sm:mb-12 md:mb-16">
         <div class="section-card">
-            <h2 class="section-title mb-6">Table of Contents</h2>
-            <div class="gold-divider mb-6"></div>
-            <nav class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                <a href="#introduction" class="toc-item text-ink-300 hover:text-gold-400 py-2">01. Introduction</a>
-                <a href="#summary" class="toc-item text-ink-300 hover:text-gold-400 py-2">02. Summary</a>
-                <a href="#information-access" class="toc-item text-ink-300 hover:text-gold-400 py-2">03. Information We Access</a>
-                <a href="#information-use" class="toc-item text-ink-300 hover:text-gold-400 py-2">04. How We Use Information</a>
-                <a href="#data-sharing" class="toc-item text-ink-300 hover:text-gold-400 py-2">05. Data Sharing</a>
-                <a href="#rights-deletion" class="toc-item text-ink-300 hover:text-gold-400 py-2">06. Rights & Deletion</a>
-                <a href="#permissions" class="toc-item text-ink-300 hover:text-gold-400 py-2">07. Android Permissions</a>
-                <a href="#licensing" class="toc-item text-ink-300 hover:text-gold-400 py-2">08. Content Licensing</a>
-                <a href="#children" class="toc-item text-ink-300 hover:text-gold-400 py-2">09. Children's Privacy</a>
-                <a href="#security" class="toc-item text-ink-300 hover:text-gold-400 py-2">10. Security</a>
-                <a href="#changes" class="toc-item text-ink-300 hover:text-gold-400 py-2">11. Policy Changes</a>
-                <a href="#contact" class="toc-item text-ink-300 hover:text-gold-400 py-2">12. Contact Us</a>
+            <h2 class="section-title mb-4 sm:mb-6">Table of Contents</h2>
+            <div class="gold-divider mb-4 sm:mb-6"></div>
+            <nav class="grid grid-cols-1 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-1">
+                <a href="#introduction" class="toc-item">01. Introduction</a>
+                <a href="#summary" class="toc-item">02. Summary</a>
+                <a href="#information-access" class="toc-item">03. Information We Access</a>
+                <a href="#information-use" class="toc-item">04. How We Use Information</a>
+                <a href="#data-sharing" class="toc-item">05. Data Sharing</a>
+                <a href="#rights-deletion" class="toc-item">06. Rights &amp; Deletion</a>
+                <a href="#permissions" class="toc-item">07. Android Permissions</a>
+                <a href="#licensing" class="toc-item">08. Content Licensing</a>
+                <a href="#children" class="toc-item">09. Children's Privacy</a>
+                <a href="#security" class="toc-item">10. Security</a>
+                <a href="#changes" class="toc-item">11. Policy Changes</a>
+                <a href="#contact" class="toc-item">12. Contact Us</a>
             </nav>
         </div>
     </section>
 
     <!-- Main Content -->
-    <main class="max-w-4xl mx-auto px-6 pb-20">
+    <main class="max-w-4xl mx-auto page-pad pb-12 sm:pb-16 md:pb-20">
         <!-- Section 01: Introduction -->
         <section id="introduction" class="section-card">
-            <div class="flex items-start gap-6 mb-6">
+            <div class="section-header">
                 <span class="section-number">01</span>
-                <div class="flex-1">
+                <div class="flex-1 min-w-0">
                     <h2 class="section-title">Introduction</h2>
-                    <div class="gold-divider mb-4"></div>
+                    <div class="gold-divider mb-0"></div>
                 </div>
             </div>
-            <p class="text-ink-300 mb-4">
+            <p class="body-text mb-4">
                 VibeTube ("we", "our", or "the App") is an independent media player and manager that allows users to discover and play royalty-licensed online audio/video content, save open-license media for offline use, and play local media files stored on their device. This Privacy Policy explains what information the App accesses, how it is handled, and your choices.
             </p>
-            <p class="text-ink-300">
+            <p class="body-text">
                 By installing and using VibeTube, you agree to this Privacy Policy.
             </p>
         </section>
 
         <!-- Section 02: Summary -->
         <section id="summary" class="section-card">
-            <div class="flex items-start gap-6 mb-6">
+            <div class="section-header">
                 <span class="section-number">02</span>
-                <div class="flex-1">
+                <div class="flex-1 min-w-0">
                     <h2 class="section-title">Summary</h2>
-                    <div class="gold-divider mb-4"></div>
+                    <div class="gold-divider mb-0"></div>
                 </div>
             </div>
-            <ul class="space-y-3 text-ink-300">
-                <li class="flex items-start gap-3">
-                    <span class="text-gold-400 mt-1">•</span>
+            <ul class="bullet-list body-text">
+                <li>
+                    <span class="dot">•</span>
                     <span><strong class="text-gold-200">No Account Required:</strong> We do not require account creation, registration, or personal information (such as name, email, or phone number) to use the App.</span>
                 </li>
-                <li class="flex items-start gap-3">
-                    <span class="text-gold-400 mt-1">•</span>
+                <li>
+                    <span class="dot">•</span>
                     <span><strong class="text-gold-200">On-Device Storage:</strong> All user data, including playback preferences, favorites, playlists, search history, and offline saves, are stored locally on your device.</span>
                 </li>
-                <li class="flex items-start gap-3">
-                    <span class="text-gold-400 mt-1">•</span>
+                <li>
+                    <span class="dot">•</span>
                     <span><strong class="text-gold-200">Internet Usage:</strong> Internet access is used solely to fetch open-license media streams, retrieve metadata, and display advertisements.</span>
                 </li>
-                <li class="flex items-start gap-3">
-                    <span class="text-gold-400 mt-1">•</span>
+                <li>
+                    <span class="dot">•</span>
                     <span><strong class="text-gold-200">No Central User Database:</strong> We do not collect or store personal profiles on external servers.</span>
                 </li>
             </ul>
@@ -336,36 +540,36 @@
 
         <!-- Section 03: Information We Access -->
         <section id="information-access" class="section-card">
-            <div class="flex items-start gap-6 mb-6">
+            <div class="section-header">
                 <span class="section-number">03</span>
-                <div class="flex-1">
+                <div class="flex-1 min-w-0">
                     <h2 class="section-title">Information We Access or Process</h2>
-                    <div class="gold-divider mb-4"></div>
+                    <div class="gold-divider mb-0"></div>
                 </div>
             </div>
-            
-            <div class="space-y-6 text-ink-300">
+
+            <div class="space-y-6 body-text">
                 <div>
-                    <h3 class="text-gold-200 font-semibold mb-2">3.1 Information Stored on Your Device</h3>
+                    <h3 class="text-gold-200 font-semibold mb-2 text-base sm:text-lg">3.1 Information Stored on Your Device</h3>
                     <p class="mb-3">The App stores the following data locally on your device:</p>
-                    <ul class="list-disc list-inside space-y-1 ml-4">
+                    <ul class="disc-list mb-3">
                         <li>App settings and user preferences (e.g., playback speed, equalizer settings)</li>
                         <li>Search history, favorites, and custom playlists</li>
                         <li>Download metadata and saved media files chosen by the user</li>
                         <li>Temporary cached media for uninterrupted playback</li>
                     </ul>
-                    <p class="mt-3 text-ink-400">This data remains strictly on your device until you clear app data or uninstall VibeTube.</p>
+                    <p class="text-ink-200">This data remains strictly on your device until you clear app data or uninstall VibeTube.</p>
                 </div>
 
                 <div>
-                    <h3 class="text-gold-200 font-semibold mb-2">3.2 Local Media Access</h3>
+                    <h3 class="text-gold-200 font-semibold mb-2 text-base sm:text-lg">3.2 Local Media Access</h3>
                     <p>With your explicit permission, VibeTube accesses local audio and video files on your device to display your personal media library and artwork. Local media is used strictly for offline playback within the App and is never uploaded to any external server.</p>
                 </div>
 
                 <div>
-                    <h3 class="text-gold-200 font-semibold mb-2">3.3 Online Content Requests</h3>
+                    <h3 class="text-gold-200 font-semibold mb-2 text-base sm:text-lg">3.3 Online Content Requests</h3>
                     <p class="mb-3">When searching, streaming, or downloading content, the App sends standard HTTP network requests to open-access media APIs and public domain repositories (such as CCmixter.org and Archive.org). These requests include standard technical data:</p>
-                    <ul class="list-disc list-inside space-y-1 ml-4">
+                    <ul class="disc-list">
                         <li>Search terms entered by the user</li>
                         <li>Technical metadata required for media streaming</li>
                         <li>Device/network parameters typical of standard HTTP connections (e.g., IP address, user-agent)</li>
@@ -373,9 +577,9 @@
                 </div>
 
                 <div>
-                    <h3 class="text-gold-200 font-semibold mb-2">3.4 Notifications and Background Services</h3>
+                    <h3 class="text-gold-200 font-semibold mb-2 text-base sm:text-lg">3.4 Notifications and Background Services</h3>
                     <p class="mb-3">With user consent, VibeTube utilizes background services and system notifications for:</p>
-                    <ul class="list-disc list-inside space-y-1 ml-4">
+                    <ul class="disc-list">
                         <li>Active download progress and completion alerts</li>
                         <li>Background playback controls ("Now Playing" notification widget)</li>
                         <li>Resuming unfinished downloads after device reboots</li>
@@ -383,20 +587,24 @@
                 </div>
 
                 <div>
-                    <h3 class="text-gold-200 font-semibold mb-2">3.5 Advertising & Third-Party SDKs</h3>
+                    <h3 class="text-gold-200 font-semibold mb-2 text-base sm:text-lg">3.5 Advertising &amp; Third-Party SDKs</h3>
                     <p class="mb-3">VibeTube integrates third-party advertising networks to monetize the application. These ad networks may collect anonymous technical identifiers (such as Android Advertising ID, IP address, and device model) to serve contextual ads:</p>
-                    <div class="bg-ink-800/50 rounded-lg p-4 border border-gold-900/20">
-                        <p class="font-medium text-gold-200 mb-2">Meta Audience Network</p>
-                        <p class="text-sm mb-4">Used for serving advertisements. Review Meta's Privacy Policy at <a href="https://www.facebook.com/about/privacy" class="gold-link" target="_blank" rel="noopener noreferrer">https://www.facebook.com/about/privacy</a></p>
-                        <p class="font-medium text-gold-200 mb-2">Google AdMob / Play Services</p>
-                        <p class="text-sm">Used for ad delivery and infrastructure stability. Review Google's Privacy Policy at <a href="https://policies.google.com/privacy" class="gold-link" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
+                    <div class="info-box space-y-4">
+                        <div>
+                            <p class="font-medium text-gold-200 mb-1">Meta Audience Network</p>
+                            <p class="text-sm sm:text-base">Used for serving advertisements. Review Meta's Privacy Policy at <a href="https://www.facebook.com/about/privacy" class="gold-link" target="_blank" rel="noopener noreferrer">https://www.facebook.com/about/privacy</a></p>
+                        </div>
+                        <div>
+                            <p class="font-medium text-gold-200 mb-1">Google AdMob / Play Services</p>
+                            <p class="text-sm sm:text-base">Used for ad delivery and infrastructure stability. Review Google's Privacy Policy at <a href="https://policies.google.com/privacy" class="gold-link" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
+                        </div>
                     </div>
                 </div>
 
                 <div>
-                    <h3 class="text-gold-200 font-semibold mb-2">3.6 Information We Do NOT Collect</h3>
+                    <h3 class="text-gold-200 font-semibold mb-2 text-base sm:text-lg">3.6 Information We Do NOT Collect</h3>
                     <p class="mb-3">VibeTube does NOT collect, request, or store:</p>
-                    <ul class="list-disc list-inside space-y-1 ml-4">
+                    <ul class="disc-list">
                         <li>Personal identifiers (Name, Email, Phone Number, Home Address)</li>
                         <li>Precise GPS Location Data</li>
                         <li>Contacts, SMS, or Call Logs</li>
@@ -408,15 +616,15 @@
 
         <!-- Section 04: How We Use Information -->
         <section id="information-use" class="section-card">
-            <div class="flex items-start gap-6 mb-6">
+            <div class="section-header">
                 <span class="section-number">04</span>
-                <div class="flex-1">
+                <div class="flex-1 min-w-0">
                     <h2 class="section-title">How We Use Information</h2>
-                    <div class="gold-divider mb-4"></div>
+                    <div class="gold-divider mb-0"></div>
                 </div>
             </div>
-            <p class="text-ink-300 mb-3">On-device storage and technical parameters are processed solely to:</p>
-            <ul class="list-disc list-inside space-y-2 text-ink-300 ml-4">
+            <p class="body-text mb-3">On-device storage and technical parameters are processed solely to:</p>
+            <ul class="disc-list body-text">
                 <li>Provide smooth playback, search functionality, offline caching, and media management</li>
                 <li>Maintain user preferences and custom playlists</li>
                 <li>Render advertisements through authorized monetization partners</li>
@@ -426,31 +634,31 @@
 
         <!-- Section 05: Data Sharing -->
         <section id="data-sharing" class="section-card">
-            <div class="flex items-start gap-6 mb-6">
+            <div class="section-header">
                 <span class="section-number">05</span>
-                <div class="flex-1">
-                    <h2 class="section-title">Data Sharing & Third-Party Disclosure</h2>
-                    <div class="gold-divider mb-4"></div>
+                <div class="flex-1 min-w-0">
+                    <h2 class="section-title">Data Sharing &amp; Third-Party Disclosure</h2>
+                    <div class="gold-divider mb-0"></div>
                 </div>
             </div>
-            <p class="text-ink-300 mb-3">We do not sell, trade, or transfer your data to outside parties. Data is processed externally only as required for core service operation:</p>
-            <ul class="list-disc list-inside space-y-2 text-ink-300 ml-4">
-                <li>Public Domain & Open-License Content Repositories accessed by network requests</li>
-                <li>Authorized Advertising Networks (Meta Audience Network & Google AdMob)</li>
+            <p class="body-text mb-3">We do not sell, trade, or transfer your data to outside parties. Data is processed externally only as required for core service operation:</p>
+            <ul class="disc-list body-text">
+                <li>Public Domain &amp; Open-License Content Repositories accessed by network requests</li>
+                <li>Authorized Advertising Networks (Meta Audience Network &amp; Google AdMob)</li>
             </ul>
         </section>
 
         <!-- Section 06: Rights and Data Deletion -->
         <section id="rights-deletion" class="section-card">
-            <div class="flex items-start gap-6 mb-6">
+            <div class="section-header">
                 <span class="section-number">06</span>
-                <div class="flex-1">
+                <div class="flex-1 min-w-0">
                     <h2 class="section-title">Rights, Data Retention, and Deletion</h2>
-                    <div class="gold-divider mb-4"></div>
+                    <div class="gold-divider mb-0"></div>
                 </div>
             </div>
-            <p class="text-ink-300 mb-3">Since all user data is stored locally on your device, you have full control over your data. You can delete all processed data at any time by:</p>
-            <ul class="list-disc list-inside space-y-2 text-ink-300 ml-4">
+            <p class="body-text mb-3">Since all user data is stored locally on your device, you have full control over your data. You can delete all processed data at any time by:</p>
+            <ul class="disc-list body-text">
                 <li>Clearing the cache and search history via App Settings</li>
                 <li>Clearing storage/data for VibeTube under Android System Settings</li>
                 <li>Uninstalling the application (this permanently removes all app-private storage)</li>
@@ -459,45 +667,75 @@
 
         <!-- Section 07: Android Permissions -->
         <section id="permissions" class="section-card">
-            <div class="flex items-start gap-6 mb-6">
+            <div class="section-header">
                 <span class="section-number">07</span>
-                <div class="flex-1">
+                <div class="flex-1 min-w-0">
                     <h2 class="section-title">Android Permissions Requested</h2>
-                    <div class="gold-divider mb-4"></div>
+                    <div class="gold-divider mb-0"></div>
                 </div>
             </div>
-            <div class="overflow-x-auto">
-                <table class="w-full text-left">
+
+            <!-- Mobile: stacked cards -->
+            <div class="perm-cards">
+                <div class="perm-card">
+                    <p class="perm-name">INTERNET / ACCESS_NETWORK_STATE</p>
+                    <p class="perm-purpose">Stream online media, manage network requests, and load ads</p>
+                </div>
+                <div class="perm-card">
+                    <p class="perm-name">READ_EXTERNAL_STORAGE / READ_MEDIA_AUDIO</p>
+                    <p class="perm-purpose">Access local audio files to build your local offline library</p>
+                </div>
+                <div class="perm-card">
+                    <p class="perm-name">WRITE_EXTERNAL_STORAGE</p>
+                    <p class="perm-purpose">Save royalty-free media files directly to device storage</p>
+                </div>
+                <div class="perm-card">
+                    <p class="perm-name">POST_NOTIFICATIONS</p>
+                    <p class="perm-purpose">Display playback status and download progress notifications</p>
+                </div>
+                <div class="perm-card">
+                    <p class="perm-name">FOREGROUND_SERVICE</p>
+                    <p class="perm-purpose">Maintain uninterrupted audio playback and active downloads in the background</p>
+                </div>
+                <div class="perm-card">
+                    <p class="perm-name">RECEIVE_BOOT_COMPLETED</p>
+                    <p class="perm-purpose">Safely resume incomplete user downloads after system reboots</p>
+                </div>
+            </div>
+
+            <!-- Tablet/Desktop: table -->
+            <div class="perm-table-wrap">
+                <table class="perm-table">
                     <thead>
-                        <tr class="border-b border-gold-900/30">
-                            <th class="py-3 px-4 font-semibold text-gold-200">Permission</th>
-                            <th class="py-3 px-4 font-semibold text-gold-200">Purpose</th>
+                        <tr>
+                            <th>Permission</th>
+                            <th>Purpose</th>
                         </tr>
                     </thead>
-                    <tbody class="text-ink-300">
-                        <tr class="border-b border-gold-900/20">
-                            <td class="py-3 px-4 font-mono text-sm text-gold-400">INTERNET / ACCESS_NETWORK_STATE</td>
-                            <td class="py-3 px-4">Stream online media, manage network requests, and load ads</td>
-                        </tr>
-                        <tr class="border-b border-gold-900/20">
-                            <td class="py-3 px-4 font-mono text-sm text-gold-400">READ_EXTERNAL_STORAGE / READ_MEDIA_AUDIO</td>
-                            <td class="py-3 px-4">Access local audio files to build your local offline library</td>
-                        </tr>
-                        <tr class="border-b border-gold-900/20">
-                            <td class="py-3 px-4 font-mono text-sm text-gold-400">WRITE_EXTERNAL_STORAGE</td>
-                            <td class="py-3 px-4">Save royalty-free media files directly to device storage</td>
-                        </tr>
-                        <tr class="border-b border-gold-900/20">
-                            <td class="py-3 px-4 font-mono text-sm text-gold-400">POST_NOTIFICATIONS</td>
-                            <td class="py-3 px-4">Display playback status and download progress notifications</td>
-                        </tr>
-                        <tr class="border-b border-gold-900/20">
-                            <td class="py-3 px-4 font-mono text-sm text-gold-400">FOREGROUND_SERVICE</td>
-                            <td class="py-3 px-4">Maintain uninterrupted audio playback and active downloads in the background</td>
+                    <tbody>
+                        <tr>
+                            <td><span class="perm-name">INTERNET / ACCESS_NETWORK_STATE</span></td>
+                            <td>Stream online media, manage network requests, and load ads</td>
                         </tr>
                         <tr>
-                            <td class="py-3 px-4 font-mono text-sm text-gold-400">RECEIVE_BOOT_COMPLETED</td>
-                            <td class="py-3 px-4">Safely resume incomplete user downloads after system reboots</td>
+                            <td><span class="perm-name">READ_EXTERNAL_STORAGE / READ_MEDIA_AUDIO</span></td>
+                            <td>Access local audio files to build your local offline library</td>
+                        </tr>
+                        <tr>
+                            <td><span class="perm-name">WRITE_EXTERNAL_STORAGE</span></td>
+                            <td>Save royalty-free media files directly to device storage</td>
+                        </tr>
+                        <tr>
+                            <td><span class="perm-name">POST_NOTIFICATIONS</span></td>
+                            <td>Display playback status and download progress notifications</td>
+                        </tr>
+                        <tr>
+                            <td><span class="perm-name">FOREGROUND_SERVICE</span></td>
+                            <td>Maintain uninterrupted audio playback and active downloads in the background</td>
+                        </tr>
+                        <tr>
+                            <td><span class="perm-name">RECEIVE_BOOT_COMPLETED</span></td>
+                            <td>Safely resume incomplete user downloads after system reboots</td>
                         </tr>
                     </tbody>
                 </table>
@@ -506,74 +744,70 @@
 
         <!-- Section 08: Content Licensing -->
         <section id="licensing" class="section-card">
-            <div class="flex items-start gap-6 mb-6">
+            <div class="section-header">
                 <span class="section-number">08</span>
-                <div class="flex-1">
-                    <h2 class="section-title">Content Licensing & Legal Safeguard</h2>
-                    <div class="gold-divider mb-4"></div>
+                <div class="flex-1 min-w-0">
+                    <h2 class="section-title">Content Licensing &amp; Legal Safeguard</h2>
+                    <div class="gold-divider mb-0"></div>
                 </div>
             </div>
-            <p class="text-ink-300 mb-3">All media tracks accessible via online search are provided under open licenses, primarily Creative Commons (CC BY / CC BY-SA 3.0), sourced from public domain databases including CCmixter.org and Archive.org.</p>
-            <p class="text-ink-300">VibeTube is an independent media player. It does not host, stream, or distribute copyrighted commercial music from proprietary streaming platforms.</p>
+            <p class="body-text mb-3">All media tracks accessible via online search are provided under open licenses, primarily Creative Commons (CC BY / CC BY-SA 3.0), sourced from public domain databases including CCmixter.org and Archive.org.</p>
+            <p class="body-text">VibeTube is an independent media player. It does not host, stream, or distribute copyrighted commercial music from proprietary streaming platforms.</p>
         </section>
 
         <!-- Section 09: Children's Privacy -->
         <section id="children" class="section-card">
-            <div class="flex items-start gap-6 mb-6">
+            <div class="section-header">
                 <span class="section-number">09</span>
-                <div class="flex-1">
+                <div class="flex-1 min-w-0">
                     <h2 class="section-title">Children's Privacy</h2>
-                    <div class="gold-divider mb-4"></div>
+                    <div class="gold-divider mb-0"></div>
                 </div>
             </div>
-            <p class="text-ink-300">VibeTube is not directed toward children under the age of 13. We do not knowingly collect personal data from children. If you believe a child has accessed the app and provided data, please contact us for immediate resolution.</p>
+            <p class="body-text">VibeTube is not directed toward children under the age of 13. We do not knowingly collect personal data from children. If you believe a child has accessed the app and provided data, please contact us for immediate resolution.</p>
         </section>
 
         <!-- Section 10: Security -->
         <section id="security" class="section-card">
-            <div class="flex items-start gap-6 mb-6">
+            <div class="section-header">
                 <span class="section-number">10</span>
-                <div class="flex-1">
+                <div class="flex-1 min-w-0">
                     <h2 class="section-title">Security</h2>
-                    <div class="gold-divider mb-4"></div>
+                    <div class="gold-divider mb-0"></div>
                 </div>
             </div>
-            <p class="text-ink-300">We utilize standard Android Application Sandboxing to secure on-device data. However, users are responsible for maintaining physical security and access controls on their personal devices.</p>
+            <p class="body-text">We utilize standard Android Application Sandboxing to secure on-device data. However, users are responsible for maintaining physical security and access controls on their personal devices.</p>
         </section>
 
         <!-- Section 11: Changes -->
         <section id="changes" class="section-card">
-            <div class="flex items-start gap-6 mb-6">
+            <div class="section-header">
                 <span class="section-number">11</span>
-                <div class="flex-1">
+                <div class="flex-1 min-w-0">
                     <h2 class="section-title">Changes to This Privacy Policy</h2>
-                    <div class="gold-divider mb-4"></div>
+                    <div class="gold-divider mb-0"></div>
                 </div>
             </div>
-            <p class="text-ink-300">We reserve the right to update this policy periodically. Revisions will be reflected by updating the "Effective date" at the top of this document. Continued use of VibeTube implies acceptance of the revised policy.</p>
+            <p class="body-text">We reserve the right to update this policy periodically. Revisions will be reflected by updating the "Effective date" at the top of this document. Continued use of VibeTube implies acceptance of the revised policy.</p>
         </section>
 
         <!-- Section 12: Contact -->
         <section id="contact" class="section-card">
-            <div class="flex items-start gap-6 mb-6">
+            <div class="section-header">
                 <span class="section-number">12</span>
-                <div class="flex-1">
+                <div class="flex-1 min-w-0">
                     <h2 class="section-title">Contact Us</h2>
-                    <div class="gold-divider mb-4"></div>
+                    <div class="gold-divider mb-0"></div>
                 </div>
             </div>
-            <p class="text-ink-300 mb-4">For questions or inquiries regarding this Privacy Policy or VibeTube's data handling:</p>
-            <div class="bg-ink-800/50 rounded-lg p-4 border border-gold-900/20">
-                <p class="font-semibold text-gold-200 mb-2">AppBox Labs</p>
-                <p class="text-ink-300 mb-1">App: VibeTube</p>
-                <p class="text-ink-300">Email: <a href="mailto:your-email@example.com" class="gold-link">your-email@example.com</a></p>
-            </div>
+            <p class="body-text mb-4">For questions or inquiries regarding this Privacy Policy or VibeTube's data handling:</p>
+            <p class="body-text">Email: <a href="mailto:appboxlabscontact@gmail.com" class="gold-link">appboxlabscontact@gmail.com</a></p>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="border-t border-gold-900/20 py-8">
-        <div class="max-w-4xl mx-auto px-6 text-center">
+    <footer class="site-footer">
+        <div class="max-w-4xl mx-auto">
             <div class="gold-divider mb-6"></div>
             <p class="text-gold-400 font-semibold mb-2">VibeTube</p>
             <p class="text-ink-400 text-sm">© 2026 AppBox Labs. All rights reserved.</p>
