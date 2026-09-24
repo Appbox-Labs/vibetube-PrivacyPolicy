@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - VibeTube</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .section-gradient {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+        }
+        
+        .card-gradient {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+        }
+        
+        .dark-mode {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        }
+        
+        .dark-mode .section-gradient {
+            background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+        }
+        
+        .dark-mode .card-gradient {
+            background: linear-gradient(135deg, #374151 0%, #1f2937 100%);
+        }
+        
+        .dark-mode .text-gray-600,
+        .dark-mode .text-gray-700,
+        .dark-mode .text-gray-800 {
+            color: #e5e7eb;
+        }
+        
+        .dark-mode .text-gray-900 {
+            color: #f3f4f6;
+        }
+        
+        .dark-mode .bg-white {
+            background: #1f2937;
+        }
+        
+        .dark-mode .border-gray-200 {
+            border-color: #374151;
+        }
+        
+        .dark-mode .hover\:bg-gray-50:hover {
+            background: #374151;
+        }
+    </style>
+</head>
+<body class="min-h-screen section-gradient">
+    <!-- Header -->
+    <header class="gradient-bg text-white py-6 shadow-lg">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center">
+                        <svg class="w-8 h-8 gradient-text" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold">VibeTube</h1>
+                        <p class="text-sm opacity-90">Privacy Policy</p>
+                    </div>
+                </div>
+                <button id="darkModeToggle" class="p-2 rounded-full bg-white/20 hover:bg-white/30 transition-colors">
+                    <svg id="sunIcon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+                    </svg>
+                    <svg id="moonIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8 max-w-4xl">
+        <!-- Effective Date Badge -->
+        <div class="card-gradient rounded-xl shadow-md p-6 mb-8 border border-gray-200">
+            <div class="flex flex-wrap items-center justify-between gap-4">
+                <div>
+                    <p class="text-sm text-gray-600 mb-1">Effective Date</p>
+                    <p class="text-lg font-semibold gradient-text">[দিন মাস ২০২৬]</p>
+                </div>
+                <div class="text-right">
+                    <p class="text-sm text-gray-600 mb-1">Developer</p>
+                    <p class="text-lg font-semibold text-gray-800">AppBox Labs</p>
+                </div>
+                <div class="text-right">
+                    <p class="text-sm text-gray-600 mb-1">App</p>
+                    <p class="text-lg font-semibold text-gray-800">VibeTube</p>
+                    <p class="text-xs text-gray-500">com.appboxlabs.vibetube</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Introduction -->
+        <section class="card-gradient rounded-xl shadow-md p-6 mb-6 border border-gray-200">
+            <h2 class="text-2xl font-bold gradient-text mb-4">1. Introduction</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                VibeTube ("we", "our", or "the App") is an independent media player and manager that allows users to discover and play royalty-licensed online audio/video content, save open-license media for offline use, and play local media files stored on their device. This Privacy Policy explains what information the App accesses, how it is handled, and your choices.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+                By installing and using VibeTube, you agree to this Privacy Policy.
+            </p>
+        </section>
+
+        <!-- Summary -->
+        <section class="card-gradient rounded-xl shadow-md p-6 mb-6 border border-gray-200">
+            <h2 class="text-2xl font-bold gradient-text mb-4">2. Summary</h2>
+            <div class="space-y-4">
+                <div class="flex items-start space-x-3">
+                    <div class="w-8 h-8 rounded-full gradient-bg flex items-center justify-center flex-shrink-0 mt-1">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-800 mb-1">No Account Required</h3>
+                        <p class="text-gray-600">We do not require account creation, registration, or personal information (such as name, email, or phone number) to use the App.</p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-3">
+                    <div class="w-8 h-8 rounded-full gradient-bg flex items-center justify-center flex-shrink-0 mt-1">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-800 mb-1">On-Device Storage</h3>
+                        <p class="text-gray-600">All user data, including playback preferences, favorites, playlists, search history, and offline saves, are stored locally on your device.</p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-3">
+                    <div class="w-8 h-8 rounded-full gradient-bg flex items-center justify-center flex-shrink-0 mt-1">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-800 mb-1">Internet Usage</h3>
+                        <p class="text-gray-600">Internet access is used solely to fetch open-license media streams, retrieve metadata, and display advertisements.</p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-3">
+                    <div class="w-8 h-8 rounded-full gradient-bg flex items-center justify-center flex-shrink-0 mt-1">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-800 mb-1">No Central User Database</h3>
+                        <p class="text-gray-600">We do not collect or store personal profiles on external servers.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Information We Access -->
+        <section class="card-gradient rounded-xl shadow-md p-6 mb-6 border border-gray-200">
+            <h2 class="text-2xl font-bold gradient-text mb-4">3. Information We Access or Process</h2>
+            
+            <div class="space-y-6">
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-3">3.1 Information Stored on Your Device</h3>
+                    <p class="text-gray-700 leading-relaxed mb-3">The App stores the following data locally on your device:</p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2 ml-4">
+                        <li>App settings and user preferences (e.g., playback speed, equalizer settings)</li>
+                        <li>Search history, favorites, and custom playlists</li>
+                        <li>Download metadata and saved media files chosen by the user</li>
+                        <li>Temporary cached media for uninterrupted playback</li>
+                    </ul>
+                    <p class="text-gray-600 mt-3">This data remains strictly on your device until you clear app data or uninstall VibeTube.</p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-3">3.2 Local Media Access</h3>
+                    <p class="text-gray-700 leading-relaxed">With your explicit permission, VibeTube accesses local audio and video files on your device to display your personal media library and artwork. Local media is used strictly for offline playback within the App and is never uploaded to any external server.</p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-3">3.3 Online Content Requests</h3>
+                    <p class="text-gray-700 leading-relaxed mb-3">When searching, streaming, or downloading content, the App sends standard HTTP network requests to open-access media APIs and public domain repositories (such as CCmixter.org and Archive.org). These requests include standard technical data:</p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2 ml-4">
+                        <li>Search terms entered by the user</li>
+                        <li>Technical metadata required for media streaming</li>
+                        <li>Device/network parameters typical of standard HTTP connections (e.g., IP address, user-agent)</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-3">3.4 Notifications and Background Services</h3>
+                    <p class="text-gray-700 leading-relaxed mb-3">With user consent, VibeTube utilizes background services and system notifications for:</p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2 ml-4">
+                        <li>Active download progress and completion alerts</li>
+                        <li>Background playback controls ("Now Playing" notification widget)</li>
+                        <li>Resuming unfinished downloads after device reboots</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-3">3.5 Advertising & Third-Party SDKs</h3>
+                    <p class="text-gray-700 leading-relaxed mb-3">VibeTube integrates third-party advertising networks to monetize the application. These ad networks may collect anonymous technical identifiers (such as Android Advertising ID, IP address, and device model) to serve contextual ads:</p>
+                    <div class="bg-gray-50 rounded-lg p-4 mt-3">
+                        <p class="font-medium text-gray-800 mb-2">Meta Audience Network</p>
+                        <p class="text-gray-600 text-sm mb-4">Used for serving advertisements. Review Meta's Privacy Policy at <a href="https://www.facebook.com/about/privacy" class="text-purple-600 hover:underline" target="_blank">https://www.facebook.com/about/privacy</a></p>
+                        <p class="font-medium text-gray-800 mb-2">Google AdMob / Play Services</p>
+                        <p class="text-gray-600 text-sm">Used for ad delivery and infrastructure stability. Review Google's Privacy Policy at <a href="https://policies.google.com/privacy" class="text-purple-600 hover:underline" target="_blank">https://policies.google.com/privacy</a></p>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-3">3.6 Information We Do NOT Collect</h3>
+                    <p class="text-gray-700 leading-relaxed mb-3">VibeTube does NOT collect, request, or store:</p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2 ml-4">
+                        <li>Personal identifiers (Name, Email, Phone Number, Home Address)</li>
+                        <li>Precise GPS Location Data</li>
+                        <li>Contacts, SMS, or Call Logs</li>
+                        <li>Financial, Banking, or Payment Data</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- How We Use Information -->
+        <section class="card-gradient rounded-xl shadow-md p-6 mb-6 border border-gray-200">
+            <h2 class="text-2xl font-bold gradient-text mb-4">4. How We Use Information</h2>
+            <p class="text-gray-700 leading-relaxed mb-3">On-device storage and technical parameters are processed solely to:</p>
+            <ul class="list-disc list-inside text-gray-600 space-y-2 ml-4">
+                <li>Provide smooth playback, search functionality, offline caching, and media management</li>
+                <li>Maintain user preferences and custom playlists</li>
+                <li>Render advertisements through authorized monetization partners</li>
+                <li>Maintain stability, prevent crashes, and optimize network requests</li>
+            </ul>
+        </section>
+
+        <!-- Data Sharing -->
+        <section class="card-gradient rounded-xl shadow-md p-6 mb-6 border border-gray-200">
+            <h2 class="text-2xl font-bold gradient-text mb-4">5. Data Sharing & Third-Party Disclosure</h2>
+            <p class="text-gray-700 leading-relaxed mb-3">We do not sell, trade, or transfer your data to outside parties. Data is processed externally only as required for core service operation:</p>
+            <ul class="list-disc list-inside text-gray-600 space-y-2 ml-4">
+                <li>Public Domain & Open-License Content Repositories accessed by network requests</li>
+                <li>Authorized Advertising Networks (Meta Audience Network & Google AdMob)</li>
+            </ul>
+        </section>
+
+        <!-- Rights and Data Deletion -->
+        <section class="card-gradient rounded-xl shadow-md p-6 mb-6 border border-gray-200">
+            <h2 class="text-2xl font-bold gradient-text mb-4">6. Rights, Data Retention, and Deletion</h2>
+            <p class="text-gray-700 leading-relaxed mb-3">Since all user data is stored locally on your device, you have full control over your data. You can delete all processed data at any time by:</p>
+            <ul class="list-disc list-inside text-gray-600 space-y-2 ml-4">
+                <li>Clearing the cache and search history via App Settings</li>
+                <li>Clearing storage/data for VibeTube under Android System Settings</li>
+                <li>Uninstalling the application (this permanently removes all app-private storage)</li>
+            </ul>
+        </section>
+
+        <!-- Android Permissions -->
+        <section class="card-gradient rounded-xl shadow-md p-6 mb-6 border border-gray-200">
+            <h2 class="text-2xl font-bold gradient-text mb-4">7. Android Permissions Requested</h2>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left">
+                    <thead>
+                        <tr class="border-b border-gray-200">
+                            <th class="py-3 px-4 font-semibold text-gray-800">Permission</th>
+                            <th class="py-3 px-4 font-semibold text-gray-800">Purpose</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-600">
+                        <tr class="border-b border-gray-100">
+                            <td class="py-3 px-4 font-mono text-sm">INTERNET / ACCESS_NETWORK_STATE</td>
+                            <td class="py-3 px-4">Stream online media, manage network requests, and load ads</td>
+                        </tr>
+                        <tr class="border-b border-gray-100">
+                            <td class="py-3 px-4 font-mono text-sm">READ_EXTERNAL_STORAGE / READ_MEDIA_AUDIO</td>
+                            <td class="py-3 px-4">Access local audio files to build your local offline library</td>
+                        </tr>
+                        <tr class="border-b border-gray-100">
+                            <td class="py-3 px-4 font-mono text-sm">WRITE_EXTERNAL_STORAGE</td>
+                            <td class="py-3 px-4">Save royalty-free media files directly to device storage</td>
+                        </tr>
+                        <tr class="border-b border-gray-100">
+                            <td class="py-3 px-4 font-mono text-sm">POST_NOTIFICATIONS</td>
+                            <td class="py-3 px-4">Display playback status and download progress notifications</td>
+                        </tr>
+                        <tr class="border-b border-gray-100">
+                            <td class="py-3 px-4 font-mono text-sm">FOREGROUND_SERVICE</td>
+                            <td class="py-3 px-4">Maintain uninterrupted audio playback and active downloads in the background</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 font-mono text-sm">RECEIVE_BOOT_COMPLETED</td>
+                            <td class="py-3 px-4">Safely resume incomplete user downloads after system reboots</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Content Licensing -->
+        <section class="card-gradient rounded-xl shadow-md p-6 mb-6 border border-gray-200">
+            <h2 class="text-2xl font-bold gradient-text mb-4">8. Content Licensing & Legal Safeguard</h2>
+            <p class="text-gray-700 leading-relaxed mb-3">All media tracks accessible via online search are provided under open licenses, primarily Creative Commons (CC BY / CC BY-SA 3.0), sourced from public domain databases including CCmixter.org and Archive.org.</p>
+            <p class="text-gray-700 leading-relaxed">VibeTube is an independent media player. It does not host, stream, or distribute copyrighted commercial music from proprietary streaming platforms.</p>
+        </section>
+
+        <!-- Children's Privacy -->
+        <section class="card-gradient rounded-xl shadow-md p-6 mb-6 border border-gray-200">
+            <h2 class="text-2xl font-bold gradient-text mb-4">9. Children's Privacy</h2>
+            <p class="text-gray-700 leading-relaxed">VibeTube is not directed toward children under the age of 13. We do not knowingly collect personal data from children. If you believe a child has accessed the app and provided data, please contact us for immediate resolution.</p>
+        </section>
+
+        <!-- Security -->
+        <section class="card-gradient rounded-xl shadow-md p-6 mb-6 border border-gray-200">
+            <h2 class="text-2xl font-bold gradient-text mb-4">10. Security</h2>
+            <p class="text-gray-700 leading-relaxed">We utilize standard Android Application Sandboxing to secure on-device data. However, users are responsible for maintaining physical security and access controls on their personal devices.</p>
+        </section>
+
+        <!-- Changes -->
+        <section class="card-gradient rounded-xl shadow-md p-6 mb-6 border border-gray-200">
+            <h2 class="text-2xl font-bold gradient-text mb-4">11. Changes to This Privacy Policy</h2>
+            <p class="text-gray-700 leading-relaxed">We reserve the right to update this policy periodically. Revisions will be reflected by updating the "Effective date" at the top of this document. Continued use of VibeTube implies acceptance of the revised policy.</p>
+        </section>
+
+        <!-- Contact -->
+        <section class="card-gradient rounded-xl shadow-md p-6 mb-6 border border-gray-200">
+            <h2 class="text-2xl font-bold gradient-text mb-4">12. Contact Us</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">For questions or inquiries regarding this Privacy Policy or VibeTube's data handling:</p>
+            <div class="bg-gray-50 rounded-lg p-4">
+                <p class="font-semibold text-gray-800 mb-2">AppBox Labs</p>
+                <p class="text-gray-600">Email: <a href="mailto:your-email@example.com" class="text-purple-600 hover:underline">your-email@example.com</a></p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-white py-6 mt-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-sm opacity-90">© 2026 AppBox Labs. All rights reserved.</p>
+            <p class="text-xs opacity-75 mt-2">VibeTube Privacy Policy</p>
+        </div>
+    </footer>
+
+    <script>
+        // Dark mode toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const sunIcon = document.getElementById('sunIcon');
+        const moonIcon = document.getElementById('moonIcon');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            sunIcon.classList.toggle('hidden');
+            moonIcon.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
