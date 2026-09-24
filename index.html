@@ -24,45 +24,76 @@
         }
         
         .section-gradient {
-            background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
+            background: linear-gradient(180deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%);
         }
         
         .card-gradient {
-            background: linear-gradient(145deg, #ffffff 0%, #f1f5f9 100%);
+            background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%);
         }
         
         .dark-mode {
-            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%);
+            background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
         }
         
         .dark-mode .section-gradient {
-            background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+            background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
         }
         
         .dark-mode .card-gradient {
-            background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%);
+            background: linear-gradient(145deg, #ffffff 0%, #f1f5f9 100%);
         }
         
         .dark-mode .text-gray-600,
         .dark-mode .text-gray-700,
         .dark-mode .text-gray-800 {
-            color: #e2e8f0;
+            color: #475569;
         }
         
         .dark-mode .text-gray-900 {
-            color: #f1f5f9;
+            color: #1e293b;
         }
         
         .dark-mode .bg-white {
-            background: #1e293b;
+            background: #ffffff;
         }
         
         .dark-mode .border-gray-200 {
-            border-color: #334155;
+            border-color: #e2e8f0;
         }
         
         .dark-mode .hover\:bg-gray-50:hover {
+            background: #f1f5f9;
+        }
+        
+        /* Default dark theme styles */
+        .text-gray-600,
+        .text-gray-700,
+        .text-gray-800 {
+            color: #e2e8f0;
+        }
+        
+        .text-gray-900 {
+            color: #f1f5f9;
+        }
+        
+        .text-gray-500 {
+            color: #94a3b8;
+        }
+        
+        .bg-white {
+            background: #1e293b;
+        }
+        
+        .border-gray-200 {
+            border-color: #334155;
+        }
+        
+        .hover\:bg-gray-50:hover {
             background: #334155;
+        }
+        
+        .bg-gray-50 {
+            background: #1e293b;
         }
         
         .package-badge {
@@ -138,11 +169,11 @@
                     com.appboxlabs.vibetube
                 </div>
                 
-                <button id="darkModeToggle" class="p-3 rounded-full bg-white/20 hover:bg-white/30 transition-all duration-300 backdrop-blur-sm">
-                    <svg id="sunIcon" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <button id="darkModeToggle" class="p-3 rounded-full bg-white/20 hover:bg-white/30 transition-all duration-300 backdrop-blur-sm" title="Switch to Light Mode">
+                    <svg id="sunIcon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
                     </svg>
-                    <svg id="moonIcon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg id="moonIcon" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
                     </svg>
                 </button>
@@ -299,11 +330,11 @@
                 <div>
                     <h3 class="text-lg font-semibold text-gray-800 mb-3">3.5 Advertising & Third-Party SDKs</h3>
                     <p class="text-gray-700 leading-relaxed mb-3">VibeTube integrates third-party advertising networks to monetize the application. These ad networks may collect anonymous technical identifiers (such as Android Advertising ID, IP address, and device model) to serve contextual ads:</p>
-                    <div class="bg-gray-50 rounded-lg p-4 mt-3">
-                        <p class="font-medium text-gray-800 mb-2">Meta Audience Network</p>
-                        <p class="text-gray-600 text-sm mb-4">Used for serving advertisements. Review Meta's Privacy Policy at <a href="https://www.facebook.com/about/privacy" class="text-purple-600 hover:underline" target="_blank">https://www.facebook.com/about/privacy</a></p>
-                        <p class="font-medium text-gray-800 mb-2">Google AdMob / Play Services</p>
-                        <p class="text-gray-600 text-sm">Used for ad delivery and infrastructure stability. Review Google's Privacy Policy at <a href="https://policies.google.com/privacy" class="text-purple-600 hover:underline" target="_blank">https://policies.google.com/privacy</a></p>
+                    <div class="bg-purple-900/20 rounded-lg p-4 mt-3 border border-purple-700/30">
+                        <p class="font-medium text-purple-200 mb-2">Meta Audience Network</p>
+                        <p class="text-gray-300 text-sm mb-4">Used for serving advertisements. Review Meta's Privacy Policy at <a href="https://www.facebook.com/about/privacy" class="text-purple-400 hover:underline" target="_blank">https://www.facebook.com/about/privacy</a></p>
+                        <p class="font-medium text-purple-200 mb-2">Google AdMob / Play Services</p>
+                        <p class="text-gray-300 text-sm">Used for ad delivery and infrastructure stability. Review Google's Privacy Policy at <a href="https://policies.google.com/privacy" class="text-purple-400 hover:underline" target="_blank">https://policies.google.com/privacy</a></p>
                     </div>
                 </div>
 
@@ -382,27 +413,27 @@
                     </thead>
                     <tbody class="text-gray-700">
                         <tr class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
-                            <td class="py-4 px-6 font-mono text-sm bg-purple-50 font-semibold">INTERNET / ACCESS_NETWORK_STATE</td>
+                            <td class="py-4 px-6 font-mono text-sm bg-purple-900/30 font-semibold text-purple-300">INTERNET / ACCESS_NETWORK_STATE</td>
                             <td class="py-4 px-6">Stream online media, manage network requests, and load ads</td>
                         </tr>
                         <tr class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
-                            <td class="py-4 px-6 font-mono text-sm bg-purple-50 font-semibold">READ_EXTERNAL_STORAGE / READ_MEDIA_AUDIO</td>
+                            <td class="py-4 px-6 font-mono text-sm bg-purple-900/30 font-semibold text-purple-300">READ_EXTERNAL_STORAGE / READ_MEDIA_AUDIO</td>
                             <td class="py-4 px-6">Access local audio files to build your local offline library</td>
                         </tr>
                         <tr class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
-                            <td class="py-4 px-6 font-mono text-sm bg-purple-50 font-semibold">WRITE_EXTERNAL_STORAGE</td>
+                            <td class="py-4 px-6 font-mono text-sm bg-purple-900/30 font-semibold text-purple-300">WRITE_EXTERNAL_STORAGE</td>
                             <td class="py-4 px-6">Save royalty-free media files directly to device storage</td>
                         </tr>
                         <tr class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
-                            <td class="py-4 px-6 font-mono text-sm bg-purple-50 font-semibold">POST_NOTIFICATIONS</td>
+                            <td class="py-4 px-6 font-mono text-sm bg-purple-900/30 font-semibold text-purple-300">POST_NOTIFICATIONS</td>
                             <td class="py-4 px-6">Display playback status and download progress notifications</td>
                         </tr>
                         <tr class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
-                            <td class="py-4 px-6 font-mono text-sm bg-purple-50 font-semibold">FOREGROUND_SERVICE</td>
+                            <td class="py-4 px-6 font-mono text-sm bg-purple-900/30 font-semibold text-purple-300">FOREGROUND_SERVICE</td>
                             <td class="py-4 px-6">Maintain uninterrupted audio playback and active downloads in the background</td>
                         </tr>
                         <tr class="hover:bg-gray-50 transition-colors">
-                            <td class="py-4 px-6 font-mono text-sm bg-purple-50 font-semibold">RECEIVE_BOOT_COMPLETED</td>
+                            <td class="py-4 px-6 font-mono text-sm bg-purple-900/30 font-semibold text-purple-300">RECEIVE_BOOT_COMPLETED</td>
                             <td class="py-4 px-6">Safely resume incomplete user downloads after system reboots</td>
                         </tr>
                     </tbody>
@@ -459,9 +490,9 @@
                 <h2 class="text-3xl font-bold gradient-text">Contact Us</h2>
             </div>
             <p class="text-gray-700 leading-relaxed mb-4">For questions or inquiries regarding this Privacy Policy or VibeTube's data handling:</p>
-            <div class="bg-gray-50 rounded-lg p-4">
-                <p class="font-semibold text-gray-800 mb-2">AppBox Labs</p>
-                <p class="text-gray-600">Email: <a href="mailto:your-email@example.com" class="text-purple-600 hover:underline">your-email@example.com</a></p>
+            <div class="bg-purple-900/20 rounded-lg p-4 border border-purple-700/30">
+                <p class="font-semibold text-purple-200 mb-2">AppBox Labs</p>
+                <p class="text-gray-300">Email: <a href="mailto:your-email@example.com" class="text-purple-400 hover:underline">your-email@example.com</a></p>
             </div>
         </section>
     </main>
@@ -491,6 +522,13 @@
             body.classList.toggle('dark-mode');
             sunIcon.classList.toggle('hidden');
             moonIcon.classList.toggle('hidden');
+            
+            // Update button title
+            if (body.classList.contains('dark-mode')) {
+                darkModeToggle.setAttribute('title', 'Switch to Dark Mode');
+            } else {
+                darkModeToggle.setAttribute('title', 'Switch to Light Mode');
+            }
         });
     </script>
 </body>
