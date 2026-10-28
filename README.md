@@ -2,7 +2,7 @@
 
 ## Privacy Policy for VibeTube Mobile App
 
-**Effective Date:** September 24, 2026  
+**Effective Date:** October 28, 2026  
 **Contact:** appboxlabscontact@gmail.com
 
 ### Introduction
@@ -14,6 +14,7 @@ By installing and using VibeTube, you agree to this Privacy Policy.
 - **No Account Required:** We do not require account creation, registration, or personal information (such as name, email, or phone number) to use the App.
 - **On-Device Storage:** All user data, including playback preferences, favorites, playlists, search history, and offline saves, are stored locally on your device.
 - **Internet Usage:** Internet access is used solely to fetch open-license media streams, retrieve metadata, and display advertisements.
+- **Ads (LevelPlay):** Ads are served through Unity LevelPlay mediation with these networks — ironSource, Meta Audience Network, Unity Ads, InMobi, and Google AdMob (when enabled).
 - **No Central User Database:** We do not collect or store personal profiles on external servers.
 
 ### Information We Access or Process
@@ -42,29 +43,39 @@ With user consent, VibeTube utilizes background services and system notification
 - Background playback controls ("Now Playing" notification widget)
 - Resuming unfinished downloads after device reboots
 
-#### 3.5 Advertising & Third-Party SDKs
-VibeTube integrates third-party advertising networks to monetize the application. These ad networks may collect anonymous technical identifiers (such as Android Advertising ID, IP address, and device model) to serve contextual ads:
-- **Meta Audience Network:** Used for serving advertisements. Review Meta's Privacy Policy at https://www.facebook.com/about/privacy
-- **Google AdMob / Play Services:** Used for ad delivery and infrastructure stability. Review Google's Privacy Policy at https://policies.google.com/privacy
-
-#### 3.6 Information We Do NOT Collect
+#### 3.5 Information We Do NOT Collect
 VibeTube does NOT collect, request, or store:
 - Personal identifiers (Name, Email, Phone Number, Home Address)
 - Precise GPS Location Data
 - Contacts, SMS, or Call Logs
 - Financial, Banking, or Payment Data
 
+### Advertising & Ads
+VibeTube shows advertisements using **Unity LevelPlay** (ironSource) mediation. Ads in the App may come from these networks:
+- **Unity LevelPlay / ironSource** — mediation
+- **Meta Audience Network**
+- **Unity Ads**
+- **InMobi**
+- **Google AdMob** — when enabled
+
+These ad partners may collect anonymous technical identifiers (such as Android Advertising ID, IP address, and device model) to serve contextual ads. Privacy policies:
+- **Unity LevelPlay / ironSource:** https://unity.com/legal/privacy-policy
+- **Meta Audience Network:** https://www.facebook.com/about/privacy
+- **Unity Ads:** https://unity.com/legal/privacy-policy
+- **InMobi:** https://www.inmobi.com/privacy-policy/
+- **Google AdMob / Play Services:** https://policies.google.com/privacy
+
 ### How We Use Information
 On-device storage and technical parameters are processed solely to:
 - Provide smooth playback, search functionality, offline caching, and media management
 - Maintain user preferences and custom playlists
-- Render advertisements through authorized monetization partners
+- Render advertisements through Unity LevelPlay mediation and authorized ad network partners
 - Maintain stability, prevent crashes, and optimize network requests
 
 ### Data Sharing & Third-Party Disclosure
 We do not sell, trade, or transfer your data to outside parties. Data is processed externally only as required for core service operation:
 - Public Domain & Open-License Content Repositories accessed by network requests
-- Authorized Advertising Networks (Meta Audience Network & Google AdMob)
+- Authorized Advertising Networks via Unity LevelPlay (ironSource, Meta Audience Network, Unity Ads, InMobi, and Google AdMob when enabled)
 
 ### Rights, Data Retention, and Deletion
 Since all user data is stored locally on your device, you have full control over your data. You can delete all processed data at any time by:
@@ -76,7 +87,7 @@ Since all user data is stored locally on your device, you have full control over
 
 | Permission | Purpose |
 |------------|---------|
-| INTERNET / ACCESS_NETWORK_STATE | Stream online media, manage network requests, and load ads |
+| INTERNET / ACCESS_NETWORK_STATE | Stream online media, manage network requests, and load ads via LevelPlay and partner SDKs |
 | READ_EXTERNAL_STORAGE / READ_MEDIA_AUDIO | Access local audio files to build your local offline library |
 | WRITE_EXTERNAL_STORAGE | Save royalty-free media files directly to device storage |
 | POST_NOTIFICATIONS | Display playback status and download progress notifications |

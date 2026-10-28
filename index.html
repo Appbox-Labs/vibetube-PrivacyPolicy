@@ -196,6 +196,7 @@
         .section-card:nth-child(11) { animation-delay: 0.55s; }
         .section-card:nth-child(12) { animation-delay: 0.6s; }
         .section-card:nth-child(13) { animation-delay: 0.65s; }
+        .section-card:nth-child(14) { animation-delay: 0.7s; }
 
         .section-header {
             display: flex;
@@ -455,7 +456,7 @@
             <div class="gold-divider-thick max-w-xs sm:max-w-md mx-auto mb-6 sm:mb-8"></div>
 
             <div class="flex justify-center mb-6 sm:mb-8">
-                <span class="badge">Effective date: September 24, 2026</span>
+                <span class="badge">Effective date: October 28, 2026</span>
             </div>
 
             <div class="flex justify-center mb-6 sm:mb-8">
@@ -484,15 +485,16 @@
                 <a href="#introduction" class="toc-item">01. Introduction</a>
                 <a href="#summary" class="toc-item">02. Summary</a>
                 <a href="#information-access" class="toc-item">03. Information We Access</a>
-                <a href="#information-use" class="toc-item">04. How We Use Information</a>
-                <a href="#data-sharing" class="toc-item">05. Data Sharing</a>
-                <a href="#rights-deletion" class="toc-item">06. Rights &amp; Deletion</a>
-                <a href="#permissions" class="toc-item">07. Android Permissions</a>
-                <a href="#licensing" class="toc-item">08. Content Licensing</a>
-                <a href="#children" class="toc-item">09. Children's Privacy</a>
-                <a href="#security" class="toc-item">10. Security</a>
-                <a href="#changes" class="toc-item">11. Policy Changes</a>
-                <a href="#contact" class="toc-item">12. Contact Us</a>
+                <a href="#advertising" class="toc-item">04. Advertising &amp; Ads</a>
+                <a href="#information-use" class="toc-item">05. How We Use Information</a>
+                <a href="#data-sharing" class="toc-item">06. Data Sharing</a>
+                <a href="#rights-deletion" class="toc-item">07. Rights &amp; Deletion</a>
+                <a href="#permissions" class="toc-item">08. Android Permissions</a>
+                <a href="#licensing" class="toc-item">09. Content Licensing</a>
+                <a href="#children" class="toc-item">10. Children's Privacy</a>
+                <a href="#security" class="toc-item">11. Security</a>
+                <a href="#changes" class="toc-item">12. Policy Changes</a>
+                <a href="#contact" class="toc-item">13. Contact Us</a>
             </nav>
         </div>
     </section>
@@ -537,6 +539,10 @@
                 <li>
                     <span class="dot">•</span>
                     <span><strong class="text-gold-200">Internet Usage:</strong> Internet access is used solely to fetch open-license media streams, retrieve metadata, and display advertisements.</span>
+                </li>
+                <li>
+                    <span class="dot">•</span>
+                    <span><strong class="text-gold-200">Ads (LevelPlay):</strong> Ads are served through Unity LevelPlay mediation with these networks — ironSource, Meta Audience Network, Unity Ads, InMobi, and Google AdMob (when enabled).</span>
                 </li>
                 <li>
                     <span class="dot">•</span>
@@ -594,22 +600,7 @@
                 </div>
 
                 <div>
-                    <h3 class="text-gold-200 font-semibold mb-2 text-base sm:text-lg">3.5 Advertising &amp; Third-Party SDKs</h3>
-                    <p class="mb-3">VibeTube integrates third-party advertising networks to monetize the application. These ad networks may collect anonymous technical identifiers (such as Android Advertising ID, IP address, and device model) to serve contextual ads:</p>
-                    <div class="info-box space-y-4">
-                        <div>
-                            <p class="font-medium text-gold-200 mb-1">Meta Audience Network</p>
-                            <p class="text-sm sm:text-base">Used for serving advertisements. Review Meta's Privacy Policy at <a href="https://www.facebook.com/about/privacy" class="gold-link" target="_blank" rel="noopener noreferrer">https://www.facebook.com/about/privacy</a></p>
-                        </div>
-                        <div>
-                            <p class="font-medium text-gold-200 mb-1">Google AdMob / Play Services</p>
-                            <p class="text-sm sm:text-base">Used for ad delivery and infrastructure stability. Review Google's Privacy Policy at <a href="https://policies.google.com/privacy" class="gold-link" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <h3 class="text-gold-200 font-semibold mb-2 text-base sm:text-lg">3.6 Information We Do NOT Collect</h3>
+                    <h3 class="text-gold-200 font-semibold mb-2 text-base sm:text-lg">3.5 Information We Do NOT Collect</h3>
                     <p class="mb-3">VibeTube does NOT collect, request, or store:</p>
                     <ul class="disc-list">
                         <li>Personal identifiers (Name, Email, Phone Number, Home Address)</li>
@@ -621,10 +612,52 @@
             </div>
         </section>
 
-        <!-- Section 04: How We Use Information -->
-        <section id="information-use" class="section-card">
+        <!-- Section 04: Advertising & Ads -->
+        <section id="advertising" class="section-card">
             <div class="section-header">
                 <span class="section-number">04</span>
+                <div class="flex-1 min-w-0">
+                    <h2 class="section-title">Advertising &amp; Ads</h2>
+                    <div class="gold-divider mb-0"></div>
+                </div>
+            </div>
+            <p class="body-text mb-3">VibeTube shows advertisements using <strong class="text-gold-200">Unity LevelPlay</strong> (ironSource) mediation. Ads in the App may come from these networks:</p>
+            <ul class="disc-list body-text mb-4">
+                <li><strong class="text-gold-200">Unity LevelPlay / ironSource</strong> — mediation</li>
+                <li><strong class="text-gold-200">Meta Audience Network</strong></li>
+                <li><strong class="text-gold-200">Unity Ads</strong></li>
+                <li><strong class="text-gold-200">InMobi</strong></li>
+                <li><strong class="text-gold-200">Google AdMob</strong> — when enabled</li>
+            </ul>
+            <p class="body-text mb-3">These ad partners may collect anonymous technical identifiers (such as Android Advertising ID, IP address, and device model) to serve contextual ads. Privacy policies:</p>
+            <div class="info-box space-y-4">
+                <div>
+                    <p class="font-medium text-gold-200 mb-1">Unity LevelPlay / ironSource</p>
+                    <p class="text-sm sm:text-base body-text">Ad mediation platform used to load and optimize advertisements. Review Unity's Privacy Policy at <a href="https://unity.com/legal/privacy-policy" class="gold-link" target="_blank" rel="noopener noreferrer">https://unity.com/legal/privacy-policy</a></p>
+                </div>
+                <div>
+                    <p class="font-medium text-gold-200 mb-1">Meta Audience Network</p>
+                    <p class="text-sm sm:text-base body-text">Used for serving advertisements via LevelPlay. Review Meta's Privacy Policy at <a href="https://www.facebook.com/about/privacy" class="gold-link" target="_blank" rel="noopener noreferrer">https://www.facebook.com/about/privacy</a></p>
+                </div>
+                <div>
+                    <p class="font-medium text-gold-200 mb-1">Unity Ads</p>
+                    <p class="text-sm sm:text-base body-text">Used for serving advertisements via LevelPlay. Review Unity's Privacy Policy at <a href="https://unity.com/legal/privacy-policy" class="gold-link" target="_blank" rel="noopener noreferrer">https://unity.com/legal/privacy-policy</a></p>
+                </div>
+                <div>
+                    <p class="font-medium text-gold-200 mb-1">InMobi</p>
+                    <p class="text-sm sm:text-base body-text">Used for serving advertisements via LevelPlay. Review InMobi's Privacy Policy at <a href="https://www.inmobi.com/privacy-policy/" class="gold-link" target="_blank" rel="noopener noreferrer">https://www.inmobi.com/privacy-policy/</a></p>
+                </div>
+                <div>
+                    <p class="font-medium text-gold-200 mb-1">Google AdMob / Play Services</p>
+                    <p class="text-sm sm:text-base body-text">May be added later for ad delivery through LevelPlay. Review Google's Privacy Policy at <a href="https://policies.google.com/privacy" class="gold-link" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 05: How We Use Information -->
+        <section id="information-use" class="section-card">
+            <div class="section-header">
+                <span class="section-number">05</span>
                 <div class="flex-1 min-w-0">
                     <h2 class="section-title">How We Use Information</h2>
                     <div class="gold-divider mb-0"></div>
@@ -634,15 +667,15 @@
             <ul class="disc-list body-text">
                 <li>Provide smooth playback, search functionality, offline caching, and media management</li>
                 <li>Maintain user preferences and custom playlists</li>
-                <li>Render advertisements through authorized monetization partners</li>
+                <li>Render advertisements through Unity LevelPlay mediation and authorized ad network partners</li>
                 <li>Maintain stability, prevent crashes, and optimize network requests</li>
             </ul>
         </section>
 
-        <!-- Section 05: Data Sharing -->
+        <!-- Section 06: Data Sharing -->
         <section id="data-sharing" class="section-card">
             <div class="section-header">
-                <span class="section-number">05</span>
+                <span class="section-number">06</span>
                 <div class="flex-1 min-w-0">
                     <h2 class="section-title">Data Sharing &amp; Third-Party Disclosure</h2>
                     <div class="gold-divider mb-0"></div>
@@ -651,14 +684,14 @@
             <p class="body-text mb-3">We do not sell, trade, or transfer your data to outside parties. Data is processed externally only as required for core service operation:</p>
             <ul class="disc-list body-text">
                 <li>Public Domain &amp; Open-License Content Repositories accessed by network requests</li>
-                <li>Authorized Advertising Networks (Meta Audience Network &amp; Google AdMob)</li>
+                <li>Authorized Advertising Networks via Unity LevelPlay (ironSource, Meta Audience Network, Unity Ads, InMobi, and Google AdMob when enabled)</li>
             </ul>
         </section>
 
-        <!-- Section 06: Rights and Data Deletion -->
+        <!-- Section 07: Rights and Data Deletion -->
         <section id="rights-deletion" class="section-card">
             <div class="section-header">
-                <span class="section-number">06</span>
+                <span class="section-number">07</span>
                 <div class="flex-1 min-w-0">
                     <h2 class="section-title">Rights, Data Retention, and Deletion</h2>
                     <div class="gold-divider mb-0"></div>
@@ -672,10 +705,10 @@
             </ul>
         </section>
 
-        <!-- Section 07: Android Permissions -->
+        <!-- Section 08: Android Permissions -->
         <section id="permissions" class="section-card">
             <div class="section-header">
-                <span class="section-number">07</span>
+                <span class="section-number">08</span>
                 <div class="flex-1 min-w-0">
                     <h2 class="section-title">Android Permissions Requested</h2>
                     <div class="gold-divider mb-0"></div>
@@ -686,7 +719,7 @@
             <div class="perm-cards">
                 <div class="perm-card">
                     <p class="perm-name">INTERNET / ACCESS_NETWORK_STATE</p>
-                    <p class="perm-purpose">Stream online media, manage network requests, and load ads</p>
+                    <p class="perm-purpose">Stream online media, manage network requests, and load ads via LevelPlay and partner SDKs</p>
                 </div>
                 <div class="perm-card">
                     <p class="perm-name">READ_EXTERNAL_STORAGE / READ_MEDIA_AUDIO</p>
@@ -722,7 +755,7 @@
                     <tbody>
                         <tr>
                             <td><span class="perm-name">INTERNET / ACCESS_NETWORK_STATE</span></td>
-                            <td>Stream online media, manage network requests, and load ads</td>
+                            <td>Stream online media, manage network requests, and load ads via LevelPlay and partner SDKs</td>
                         </tr>
                         <tr>
                             <td><span class="perm-name">READ_EXTERNAL_STORAGE / READ_MEDIA_AUDIO</span></td>
@@ -749,10 +782,10 @@
             </div>
         </section>
 
-        <!-- Section 08: Content Licensing -->
+        <!-- Section 09: Content Licensing -->
         <section id="licensing" class="section-card">
             <div class="section-header">
-                <span class="section-number">08</span>
+                <span class="section-number">09</span>
                 <div class="flex-1 min-w-0">
                     <h2 class="section-title">Content Licensing &amp; Legal Safeguard</h2>
                     <div class="gold-divider mb-0"></div>
@@ -762,10 +795,10 @@
             <p class="body-text">VibeTube is an independent media player. It does not host, stream, or distribute copyrighted commercial music from proprietary streaming platforms.</p>
         </section>
 
-        <!-- Section 09: Children's Privacy -->
+        <!-- Section 10: Children's Privacy -->
         <section id="children" class="section-card">
             <div class="section-header">
-                <span class="section-number">09</span>
+                <span class="section-number">10</span>
                 <div class="flex-1 min-w-0">
                     <h2 class="section-title">Children's Privacy</h2>
                     <div class="gold-divider mb-0"></div>
@@ -774,10 +807,10 @@
             <p class="body-text">VibeTube is not directed toward children under the age of 13. We do not knowingly collect personal data from children. If you believe a child has accessed the app and provided data, please contact us for immediate resolution.</p>
         </section>
 
-        <!-- Section 10: Security -->
+        <!-- Section 11: Security -->
         <section id="security" class="section-card">
             <div class="section-header">
-                <span class="section-number">10</span>
+                <span class="section-number">11</span>
                 <div class="flex-1 min-w-0">
                     <h2 class="section-title">Security</h2>
                     <div class="gold-divider mb-0"></div>
@@ -786,10 +819,10 @@
             <p class="body-text">We utilize standard Android Application Sandboxing to secure on-device data. However, users are responsible for maintaining physical security and access controls on their personal devices.</p>
         </section>
 
-        <!-- Section 11: Changes -->
+        <!-- Section 12: Changes -->
         <section id="changes" class="section-card">
             <div class="section-header">
-                <span class="section-number">11</span>
+                <span class="section-number">12</span>
                 <div class="flex-1 min-w-0">
                     <h2 class="section-title">Changes to This Privacy Policy</h2>
                     <div class="gold-divider mb-0"></div>
@@ -798,10 +831,10 @@
             <p class="body-text">We reserve the right to update this policy periodically. Revisions will be reflected by updating the "Effective date" at the top of this document. Continued use of VibeTube implies acceptance of the revised policy.</p>
         </section>
 
-        <!-- Section 12: Contact -->
+        <!-- Section 13: Contact -->
         <section id="contact" class="section-card">
             <div class="section-header">
-                <span class="section-number">12</span>
+                <span class="section-number">13</span>
                 <div class="flex-1 min-w-0">
                     <h2 class="section-title">Contact Us</h2>
                     <div class="gold-divider mb-0"></div>
